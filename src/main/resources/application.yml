@@ -1,0 +1,7 @@
+server:
+  port: 8085
+jwt:
+  secret: upwrokTest
+  get:
+    token:
+      uri: /authenticate

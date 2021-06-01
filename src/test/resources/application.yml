@@ -1,0 +1,86 @@
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        security: DEBUG
+    com:
+      fedex: DEBUG
+spring:
+  datasource:
+    url: 
+    username: 
+    password: 
+  flyway:
+    enabled: false # Disable flyway.
+service:
+  client:
+    id:
+    secret:
+    uri:
+    
+security:
+  oauth:
+    resource:
+      jwt:
+        keys-uri: https://taz-service-dev.app.wtcdev2.paas.fedex.com/token_keys
+    token:
+      cookie:
+        name: Bearer
+    client:
+      client-id: 
+      client-secret: 
+      access-token-url: https://taz-service-dev.app.wtcdev2.paas.fedex.com/token_keys
+      access-token-uri: https://taz-service-dev.app.wtcdev2.paas.fedex.com/oauth/token
+
+cshp:
+  destination: EJBRemote
+  ejb:
+    url: t3://cshpdev-wap.idev.fedex.com:7792
+  fast:
+    fail:
+      impl: timeout
+  max:
+    concurrent:
+      connect: 
+        attempts: 40
+      invoke: 
+        attempts: 100
+  service:
+    reset: 
+      interval: 
+        msecs: 26000
+    timeout: 
+      interval: 
+        msecs: 300000
+      threshold: 5
+  version:
+    serviceId: ship
+    intermediate: 2
+    major: 16
+    minor: 0
+  jndi: 
+    name: ShipHome.v16
+    request:
+      timeout:
+        msecs: 300000
+        
+checkout:
+  async:
+    enabled: false 
+
+retailLocation:
+  rest:
+    url: https://retail-location-service-dev.app.wtcdev1.paas.fedex.com
+    
+rateService:
+  rest:
+    url: https://shipping-retail-rating-service-dev.app.clwdev1.paas.fedex.com
+    
+pesService:
+  rest:
+    url: https://package-event-service-dev-inc.app.wtcdev1.paas.fedex.com
+       
+supportService:
+  rest:
+    url: https://retail-shipping-support-service-dev.app.clwdev1.paas.fedex.com 

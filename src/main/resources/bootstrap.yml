@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: retail-shipment-creation-service
+  main: 
+    allow-bean-definition-overriding: true
