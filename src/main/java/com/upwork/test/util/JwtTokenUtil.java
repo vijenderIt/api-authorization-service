@@ -14,6 +14,12 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
+/**
+ * Class to generate token and validate token
+ * 
+ * @author Vijender.Singh
+ *
+ */
 @Component
 public class JwtTokenUtil implements Serializable {
 

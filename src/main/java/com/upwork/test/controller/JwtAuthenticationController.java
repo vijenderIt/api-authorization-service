@@ -39,7 +39,7 @@ public class JwtAuthenticationController {
 	@Autowired
 	private UserDetailsService jwtInMemoryUserDetailsService;
 
-	@PostMapping(value = "/authenticate")
+	@PostMapping(value = "/getAPIToken")
 	public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest) throws Exception {
 
 		logger.info("Request received for token generation with User : {}", authenticationRequest.getUsername());
