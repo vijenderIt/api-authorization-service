@@ -1,91 +1,28 @@
 
-# RetailShipmentCreation
+# TokenAPITester
 
 ## Getting started
-
-To build: `mvn package`
-
-To Run in MOCK mode: `java -jar target/retail-shipment-creation-service-0.0.1-SNAPSHOT.jar --spring.profiles.active=mock`
-
-Test request resource: `curl -Gv http://localhost:8080/v1/createshipments`
-
-## TODO
-
-- Test app
-- Build app
-- Document app
 
 ## Notes
 
 ## API
-```
-GET /v1/createshipments/{id}
-```
 
-### Testing
-
-
-## Runtime Dependencies
-- <TODO>
-
-#### List full maven deps
-
-```
-mvn dependency:resolve
-mvn -o dependency:list \
-| grep ":.*:.*:.*" \
-| cut -d] -f2- \
-| sed 's/:[a-z]*$//g' \
-| sort -u 
-```
-
-## Tables
-
-### CreateShipment <Example>
-Column                | Data Type            | Key         | Description
-:-------------------- | :--------------------| :---------- | :-------------
-id                    | 128bit base64 string | Primary Key | Id
-name                  | string               |             | Name of something 
-
-## Configuration
-
-### Spring Boot Profiles
-
-Profile Name | Configuration Type    | Suitable for Prod? | When to use
-:----------- | :-------------------- | :----------------- | :-----------------------------------
-cloud        | VCAP_SERVICES JSON    | Yes                | When deploying to a PaaS environment such as Cloud Foundry
-mock         | None                  | No                 | Unit and local testing without external dependencies
-<none>       | Environment Variables | Yes                | Any non PaaS deployment such as as CloudOps VM or running locally
-
-
-
-
-#### Cloud
-- Oracle: Injected by Spring Cloud Connectors using `VCAP_SERVICES`
-
-#### Local <Example>
-
-- Message repo:
-  - `spring.datasource.url=jdbc:mysql://localhost/test`
-  - `spring.datasource.username=dbuser`
-  - `spring.datasource.password=dbpass`
-  - `spring.datasource.maximum-pool-size=30`
-
-## Flows
 
 ##### Request URL <Example>
 
 ```
-PUT /v1/createshipment/{id}
-```
-##### Request Body: CreateShipment (TODO Example)
+POST /getAPIToken
 
-##### Example Response Body (TODO Example)
-
-```
 {
-    
+	"username": "",
+	"password": "" 
+	
 }
+```
+
+```
+
+POST /testAPIToken
 
 ```
 
