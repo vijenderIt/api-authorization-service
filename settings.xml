@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <pluginGroups>
+  </pluginGroups>
+  <proxies>
+    <proxy>
+      <id>fedex-proxy</id>
+      <active>true</active>
+      <protocol>http</protocol>
+      <host>internet.proxy.fedex.com</host>
+      <port>3128</port>
+      <nonProxyHosts>*.fedex.com</nonProxyHosts>
+    </proxy>
+  </proxies>
+  <servers>
+    <server>
+      <id>3531582_Nexus</id>
+      <username>${env.NEXUS_USER}</username>
+      <password>${env.NEXUS_PASSWORD}</password>
+    </server>
+    <server>
+      <id>3531582_Nexus_snapshot</id>
+       <username>${env.NEXUS_USER}</username>
+      <password>${env.NEXUS_PASSWORD}</password>
+    </server>
+  </servers>
+
+  <mirrors>
+    <mirror>
+      <id>nexus</id>
+      <mirrorOf>central</mirrorOf>
+      <url>https://nexus.prod.cloud.fedex.com:8443/nexus/repository/maven-central</url>
+    </mirror>
+  </mirrors>
+  <profiles>
+  </profiles>
+</settings>
